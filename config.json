@@ -2,8 +2,39 @@
   "name": "Lucas Santos",
   "job": "Rei do jogos digitais",
   "github": "lucas-silvs",
+  "bannerUrl": "https://images.unsplash.com/photo-1478098711619-5ab0b478d6e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
   "playlists": {
     "jogos": [
+      {
+        "title": "Kingdom Hearts III",
+        "url": "https://www.youtube.com/watch?v=j2DSEkYFRh8",
+        "thumb": "https://img.youtube.com/vi/j2DSEkYFRh8/hqdefault.jpg"
+      },
+      {
+        "title": "Final Fantasy XVI",
+        "url": "https://www.youtube.com/watch?v=yr6PtdY0i7M",
+        "thumb": "https://img.youtube.com/vi/yr6PtdY0i7M/hqdefault.jpg"
+      },
+      {
+        "title": "Kingdom Hearts III",
+        "url": "https://www.youtube.com/watch?v=j2DSEkYFRh8",
+        "thumb": "https://img.youtube.com/vi/j2DSEkYFRh8/hqdefault.jpg"
+      },
+      {
+        "title": "Final Fantasy XVI",
+        "url": "https://www.youtube.com/watch?v=yr6PtdY0i7M",
+        "thumb": "https://img.youtube.com/vi/yr6PtdY0i7M/hqdefault.jpg"
+      },
+      {
+        "title": "Kingdom Hearts III",
+        "url": "https://www.youtube.com/watch?v=j2DSEkYFRh8",
+        "thumb": "https://img.youtube.com/vi/j2DSEkYFRh8/hqdefault.jpg"
+      },
+      {
+        "title": "Final Fantasy XVI",
+        "url": "https://www.youtube.com/watch?v=yr6PtdY0i7M",
+        "thumb": "https://img.youtube.com/vi/yr6PtdY0i7M/hqdefault.jpg"
+      },
       {
         "title": "Kingdom Hearts III",
         "url": "https://www.youtube.com/watch?v=j2DSEkYFRh8",
@@ -20,6 +51,73 @@
         "title": "Bad Apple!! but it's a VS Code Auto-Formatter",
         "url": "https://www.youtube.com/watch?v=cmpg-qiPYa8",
         "thumb": "https://img.youtube.com/vi/cmpg-qiPYa8/hqdefault.jpg"
+      },
+      {
+        "title": "UwUntu Linux - The Operating System for Weeaboos (oh boy)",
+        "url": "https://www.youtube.com/watch?v=GEDcmMGRPV4",
+        "thumb": "https://img.youtube.com/vi/GEDcmMGRPV4/hqdefault.jpg"
+      },
+      {
+        "title": "Bad Apple!! but it's a VS Code Auto-Formatter",
+        "url": "https://www.youtube.com/watch?v=cmpg-qiPYa8",
+        "thumb": "https://img.youtube.com/vi/cmpg-qiPYa8/hqdefault.jpg"
+      },
+      {
+        "title": "UwUntu Linux - The Operating System for Weeaboos (oh boy)",
+        "url": "https://www.youtube.com/watch?v=GEDcmMGRPV4",
+        "thumb": "https://img.youtube.com/vi/GEDcmMGRPV4/hqdefault.jpg"
+      },
+      {
+        "title": "Bad Apple!! but it's a VS Code Auto-Formatter",
+        "url": "https://www.youtube.com/watch?v=cmpg-qiPYa8",
+        "thumb": "https://img.youtube.com/vi/cmpg-qiPYa8/hqdefault.jpg"
+      },
+      {
+        "title": "UwUntu Linux - The Operating System for Weeaboos (oh boy)",
+        "url": "https://www.youtube.com/watch?v=GEDcmMGRPV4",
+        "thumb": "https://img.youtube.com/vi/GEDcmMGRPV4/hqdefault.jpg"
+      },
+      {
+        "title": "Bad Apple!! but it's a VS Code Auto-Formatter",
+        "url": "https://www.youtube.com/watch?v=cmpg-qiPYa8",
+        "thumb": "https://img.youtube.com/vi/cmpg-qiPYa8/hqdefault.jpg"
+      },
+      {
+        "title": "UwUntu Linux - The Operating System for Weeaboos (oh boy)",
+        "url": "https://www.youtube.com/watch?v=GEDcmMGRPV4",
+        "thumb": "https://img.youtube.com/vi/GEDcmMGRPV4/hqdefault.jpg"
+      }
+    ],
+    "aluratubes Favoritos": [
+      {
+        "title": "チェンソーマン OP「KICK BACK」ファミコン風　CHAINSAW MAN OP 8bit",
+        "url": "https://www.youtube.com/watch?v=3z3Un1HhJGU",
+        "thumb": "https://img.youtube.com/vi/3z3Un1HhJGU/hqdefault.jpg"
+      },
+      {
+        "title": "Dearly Beloved Collection [Kingdom Hearts] All Versions 2021",
+        "url": "https://www.youtube.com/watch?v=gag04i5Z4Ac",
+        "thumb": "https://img.youtube.com/vi/gag04i5Z4Ac/hqdefault.jpg"
+      },
+      {
+        "title": "チェンソーマン OP「KICK BACK」ファミコン風　CHAINSAW MAN OP 8bit",
+        "url": "https://www.youtube.com/watch?v=3z3Un1HhJGU",
+        "thumb": "https://img.youtube.com/vi/3z3Un1HhJGU/hqdefault.jpg"
+      },
+      {
+        "title": "Dearly Beloved Collection [Kingdom Hearts] All Versions 2021",
+        "url": "https://www.youtube.com/watch?v=gag04i5Z4Ac",
+        "thumb": "https://img.youtube.com/vi/gag04i5Z4Ac/hqdefault.jpg"
+      },
+      {
+        "title": "チェンソーマン OP「KICK BACK」ファミコン風　CHAINSAW MAN OP 8bit",
+        "url": "https://www.youtube.com/watch?v=3z3Un1HhJGU",
+        "thumb": "https://img.youtube.com/vi/3z3Un1HhJGU/hqdefault.jpg"
+      },
+      {
+        "title": "Dearly Beloved Collection [Kingdom Hearts] All Versions 2021",
+        "url": "https://www.youtube.com/watch?v=gag04i5Z4Ac",
+        "thumb": "https://img.youtube.com/vi/gag04i5Z4Ac/hqdefault.jpg"
       }
     ]
   }
