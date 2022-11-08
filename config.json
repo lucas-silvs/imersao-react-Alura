@@ -1,0 +1,26 @@
+{
+  "name": "Lucas Santos",
+  "job": "Rei do jogos digitais",
+  "github": "lucas-silvs",
+  "playlists": {
+    "jogos": [
+      {
+        "title": "Kingdom Hearts III",
+        "url": "https://www.youtube.com/watch?v=j2DSEkYFRh8",
+        "thumb": "https://img.youtube.com/vi/j2DSEkYFRh8/hqdefault.jpg"
+      },
+      {
+        "title": "Final Fantasy XVI",
+        "url": "https://www.youtube.com/watch?v=yr6PtdY0i7M",
+        "thumb": "https://img.youtube.com/vi/yr6PtdY0i7M/hqdefault.jpg"
+      }
+    ],
+    "front-end": [
+      {
+        "title": "Bad Apple!! but it's a VS Code Auto-Formatter",
+        "url": "https://www.youtube.com/watch?v=cmpg-qiPYa8",
+        "thumb": "https://img.youtube.com/vi/cmpg-qiPYa8/hqdefault.jpg"
+      }
+    ]
+  }
+}
