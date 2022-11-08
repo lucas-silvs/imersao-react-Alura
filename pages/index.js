@@ -7,6 +7,9 @@ import { StyledTimeline } from "../src/components/Timeline";
 function HomePage() {
   const estilosHomePage = {
     //backgroundColor: "gray"
+    display: "flex",
+    flexDirection: "column",
+    flex: 1,
   };
 
   return (
@@ -33,6 +36,7 @@ const StyledHeader = styled.div`
     border-radius: 50%;
   }
   .user-info {
+    margin-top: 50px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -50,9 +54,11 @@ function Header() {
           src={`https://github.com/${config.github}.png`}
           alt="foto do perfil do usuario"
         ></img>
-        <h2>{config.name}</h2>
+        <div>
+          <h2>{config.name}</h2>
 
-        <p> {config.job} </p>
+          <p> {config.job} </p>
+        </div>
       </section>
     </StyledHeader>
   );
