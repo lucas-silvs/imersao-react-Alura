@@ -7,23 +7,37 @@ import Banner from "../src/components/Banner";
 import React from "react";
 
 function HomePage() {
+  const [valorDaBusca, setValorDaBusca] = React.useState("");
+  const [tema, setTema] = React.useState(config.temas.light);
+
   const estilosHomePage = {
     //backgroundColor: "gray"
     display: "flex",
     flexDirection: "column",
     flex: 1,
+    backgroundColor: tema.backgroundBase,
+    color: tema.textColorBase,
   };
-  const [valorDaBusca, setValorDaBusca] = React.useState("");
 
   return (
     <>
       <CSSReset />
 
       <div style={estilosHomePage}>
+        console.log(temaAtual)
+        <Menu
+          setTema={setTema}
+          busca={valorDaBusca}
+          setValor={setValorDaBusca}
+          theme={tema}
+        />
         <Banner />
-        <Header />
-        <Menu busca={valorDaBusca} setValor={setValorDaBusca} />
-        <Timeline busca={valorDaBusca} playlists={config.playlists} />
+        <Header theme={tema} />
+        <Timeline
+          theme={tema}
+          busca={valorDaBusca}
+          playlists={config.playlists}
+        />
       </div>
     </>
   );
@@ -35,6 +49,9 @@ export default HomePage;
 // 	return <div>Menu</div>;
 //   }
 const StyledHeader = styled.div`
+  background-color: ${({ theme }) => theme.backgroundBase};
+  color: ${({ theme }) => theme.textColorBase};
+
   img {
     width: 80px;
     height: 80px;
@@ -49,9 +66,9 @@ const StyledHeader = styled.div`
   }
 `;
 
-function Header() {
+function Header({ theme }) {
   return (
-    <StyledHeader>
+    <StyledHeader theme={theme}>
       {/* <img src="banner" alt="foto do banner" /> */}
       <section className="user-info">
         <img
@@ -68,10 +85,10 @@ function Header() {
   );
 }
 
-function Timeline({ busca, ...props }) {
+function Timeline({ theme, busca, ...props }) {
   const playlistsNames = Object.keys(props.playlists);
   return (
-    <StyledTimeline>
+    <StyledTimeline theme={theme}>
       {playlistsNames.map((playlistNames) => {
         const videos = props.playlists[playlistNames];
 

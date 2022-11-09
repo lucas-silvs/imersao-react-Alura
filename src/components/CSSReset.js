@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import config from "../../config.json";
 
 export const CSSReset = createGlobalStyle`
   /* Reset */
