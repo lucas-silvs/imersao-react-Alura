@@ -32,7 +32,7 @@ export default function Menu({ theme, setTema, busca, setValor }) {
       <div>
         <Logo />
       </div>
-      <Search busca={busca} setValor={setValor} />
+      <Search theme={theme} busca={busca} setValor={setValor} />
       <Toggle setTema={setTema} />
     </StyledMenu>
   );
