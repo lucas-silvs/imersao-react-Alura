@@ -4,6 +4,7 @@ import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 import Banner from "../src/components/Banner";
+import React from "react";
 
 function HomePage() {
   const estilosHomePage = {
@@ -12,6 +13,7 @@ function HomePage() {
     flexDirection: "column",
     flex: 1,
   };
+  const [valorDaBusca, setValorDaBusca] = React.useState("");
 
   return (
     <>
@@ -20,8 +22,8 @@ function HomePage() {
       <div style={estilosHomePage}>
         <Banner />
         <Header />
-        <Menu />
-        <Timeline playlists={config.playlists} />
+        <Menu busca={valorDaBusca} setValor={setValorDaBusca} />
+        <Timeline busca={valorDaBusca} playlists={config.playlists} />
       </div>
     </>
   );
@@ -66,26 +68,36 @@ function Header() {
   );
 }
 
-function Timeline(props) {
+function Timeline({ busca, ...props }) {
   const playlistsNames = Object.keys(props.playlists);
   return (
     <StyledTimeline>
       {playlistsNames.map((playlistNames) => {
-        console.log(playlistNames);
         const videos = props.playlists[playlistNames];
 
         return (
-          <section>
+          <section key={playlistNames}>
             <h2>{playlistNames}</h2>
             <div>
-              {videos.map((video) => {
-                return (
-                  <a href={video.url}>
-                    <img src={video.thumb} />
-                    <span>{video.title}</span>
-                  </a>
-                );
-              })}
+              {videos
+                .filter((video) => {
+                  const tituloVideoNormalizado = video.title.toLowerCase();
+                  const tituloBuscaNormalizado = busca.toLowerCase();
+                  return tituloVideoNormalizado.includes(
+                    tituloBuscaNormalizado
+                  );
+                })
+                .map((video) => {
+                  return (
+                    <a
+                      href={video.url}
+                      key={`${video.url}-${videos.indexOf(video)}`}
+                    >
+                      <img src={video.thumb} />
+                      <span>{video.title}</span>
+                    </a>
+                  );
+                })}
             </div>
           </section>
         );
