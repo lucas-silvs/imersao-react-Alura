@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Toggle from "../Header/components/Toggle";
+import Toggle from "./components/Toggle";
 import Search from "./components/Search";
 
 const StyledMenu = styled.header`
@@ -26,14 +26,14 @@ const StyledMenu = styled.header`
   }
 `;
 
-export default function Menu({ theme, setTema, busca, setValor }) {
+export default function Menu({ busca, setValor }) {
   return (
-    <StyledMenu theme={theme}>
+    <StyledMenu>
       <div>
         <Logo />
       </div>
-      <Search theme={theme} busca={busca} setValor={setValor} />
-      <Toggle setTema={setTema} />
+      <Search busca={busca} setValor={setValor} />
+      <Toggle />
     </StyledMenu>
   );
 }

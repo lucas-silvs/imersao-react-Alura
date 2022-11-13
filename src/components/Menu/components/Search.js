@@ -39,9 +39,9 @@ const StyledSearch = styled.div`
 // Search
 // Informação sempre desce
 
-export default function Search({ theme, busca, setValor }) {
+export default function Search({ busca, setValor }) {
   return (
-    <StyledSearch theme={theme}>
+    <StyledSearch>
       <input
         type="text"
         onChange={(e) => setValor(e.target.value)}

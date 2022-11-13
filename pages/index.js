@@ -1,6 +1,5 @@
 import config from "../config.json";
 import styled from "styled-components";
-import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 import Banner from "../src/components/Banner";
@@ -8,38 +7,21 @@ import React from "react";
 
 function HomePage() {
   const [valorDaBusca, setValorDaBusca] = React.useState("");
-  const [tema, setTema] = React.useState(config.temas.light);
 
-  const estilosHomePage = {
-    //backgroundColor: "gray"
-    display: "flex",
-    flexDirection: "column",
-    flex: 1,
-    backgroundColor: tema.backgroundBase,
-    color: tema.textColorBase,
-  };
+  // const StyledHomePage = styled.div`
+  //   //backgroundColor: "gray"
+  //   display: "flex";
+  //   flex-direction: "column";
+  //   flex: 1;
+  // `;
 
   return (
-    <>
-      <CSSReset />
-
-      <div style={estilosHomePage}>
-        console.log(temaAtual)
-        <Menu
-          setTema={setTema}
-          busca={valorDaBusca}
-          setValor={setValorDaBusca}
-          theme={tema}
-        />
-        <Banner />
-        <Header theme={tema} />
-        <Timeline
-          theme={tema}
-          busca={valorDaBusca}
-          playlists={config.playlists}
-        />
-      </div>
-    </>
+    <div>
+      <Menu busca={valorDaBusca} setValor={setValorDaBusca} />
+      <Banner />
+      <Header />
+      <Timeline busca={valorDaBusca} playlists={config.playlists} />
+    </div>
   );
 }
 
@@ -49,7 +31,7 @@ export default HomePage;
 // 	return <div>Menu</div>;
 //   }
 const StyledHeader = styled.div`
-  background-color: ${({ theme }) => theme.backgroundBase};
+  background-color: ${({ theme }) => theme.backgroundLevel1};
   color: ${({ theme }) => theme.textColorBase};
 
   img {
@@ -66,9 +48,9 @@ const StyledHeader = styled.div`
   }
 `;
 
-function Header({ theme }) {
+function Header() {
   return (
-    <StyledHeader theme={theme}>
+    <StyledHeader>
       {/* <img src="banner" alt="foto do banner" /> */}
       <section className="user-info">
         <img
@@ -85,10 +67,10 @@ function Header({ theme }) {
   );
 }
 
-function Timeline({ theme, busca, ...props }) {
+function Timeline({ busca, ...props }) {
   const playlistsNames = Object.keys(props.playlists);
   return (
-    <StyledTimeline theme={theme}>
+    <StyledTimeline>
       {playlistsNames.map((playlistNames) => {
         const videos = props.playlists[playlistNames];
 

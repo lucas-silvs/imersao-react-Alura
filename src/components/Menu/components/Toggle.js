@@ -1,14 +1,14 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { DarkModeToggle } from "@anatoliygatt/dark-mode-toggle";
-import { setRequestMeta } from "next/dist/server/request-meta";
-import config from "../../../../config.json";
+import { ColorModeContext } from "./ColorModeProvider";
 
-function Toggle({ setTema }) {
-  const [mode, setMode] = useState("light");
+function Toggle() {
+  const contexto = React.useContext(ColorModeContext);
+  const [mode, setMode] = useState(contexto.mode);
 
   return (
     <DarkModeToggle
-      mode={mode}
+      mode={contexto.mode}
       dark="Escuro"
       light="Claro"
       size="sm"
@@ -21,13 +21,7 @@ function Toggle({ setTema }) {
       inactiveThumbColor="#1e293b"
       activeThumbColor="#e2e8f0"
       onChange={(mode) => {
-        setMode(mode);
-        if (mode === "dark") {
-          console.log("fica gótico");
-          setTema(config.temas.dark);
-        } else {
-          setTema(config.temas.light);
-        }
+        contexto.setMode(mode);
       }}
     />
   );
