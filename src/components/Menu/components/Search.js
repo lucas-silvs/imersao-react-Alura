@@ -44,6 +44,7 @@ export default function Search({ busca, setValor }) {
     <StyledSearch>
       <input
         type="text"
+        placeholder="Pesquisar"
         onChange={(e) => setValor(e.target.value)}
         value={busca}
       />
