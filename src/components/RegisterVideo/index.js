@@ -14,11 +14,9 @@ function useForm(props) {
         ...dadosVideo,
         [field]: value,
       });
-      console.log("valor cadastrado: " + dadosVideo);
     },
     clearForm: () => {
       setDadosVideo({ titulo: "", url: "" });
-      console.log("valor limpo: " + { dadosVideo });
     },
   };
 }
@@ -28,6 +26,7 @@ export default function RegisterVideo() {
     initialValues: { titulo: "", url: "" },
   });
   const [formVisivel, setFormVisivel] = React.useState(false);
+  const [imagem, setImagem] = React.useState("");
 
   return (
     <StyledRegisterVideo>
@@ -40,6 +39,8 @@ export default function RegisterVideo() {
           onSubmit={(evento) => {
             evento.preventDefault();
             formCadastro.clearForm();
+            var idUrl = formCadastro.dadosVideo.url.split("=")[1];
+            setImagem(`https://img.youtube.com/vi/${idUrl}/hqdefault.jpg`);
           }}
         >
           <div>
@@ -62,6 +63,8 @@ export default function RegisterVideo() {
               onChange={(e) => formCadastro.handlerChange(e)}
             ></input>
             <button type="submit">Cadastrar video</button>
+
+            <img src={imagem} />
           </div>
         </form>
       )}
