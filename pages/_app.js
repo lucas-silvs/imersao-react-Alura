@@ -4,6 +4,7 @@ import { CSSReset } from "../src/components/CSSReset";
 import ColorModeProvider, {
   ColorModeContext,
 } from "../src/components/Menu/components/ColorModeProvider";
+import RegisterVideo from "../src/components/RegisterVideo";
 
 const temaAtual = {
   dark: {
@@ -35,6 +36,7 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider theme={temaAtual[contexto.mode]}>
       <CSSReset />
       <Component {...pageProps} />
+      <RegisterVideo />
     </ThemeProvider>
   );
 }
