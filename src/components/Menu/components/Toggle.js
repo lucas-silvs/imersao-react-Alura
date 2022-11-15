@@ -4,7 +4,6 @@ import { ColorModeContext } from "./ColorModeProvider";
 
 function Toggle() {
   const contexto = React.useContext(ColorModeContext);
-  const [mode, setMode] = useState(contexto.mode);
 
   return (
     <DarkModeToggle
