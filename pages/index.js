@@ -4,23 +4,41 @@ import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 import Banner from "../src/components/Banner";
 import React from "react";
+import videoService from "../src/services/videoServices";
 
 function HomePage() {
   const [valorDaBusca, setValorDaBusca] = React.useState("");
+  const [playlists, setPlaylists] = React.useState({});
+  const service = videoService();
 
-  // const StyledHomePage = styled.div`
-  //   //backgroundColor: "gray"
-  //   display: "flex";
-  //   flex-direction: "column";
-  //   flex: 1;
-  // `;
+  React.useEffect(() => {
+    console.log("useEffect");
+    service.getAllVideos().then((dados) => {
+      const novaPlaylist = [];
+      dados.data.forEach((video) => {
+        if (!novaPlaylist[video.playlistType]) {
+          novaPlaylist[video.playlistType] = [];
+        }
+        novaPlaylist[video.playlistType]?.push(video);
+      });
+      setPlaylists(novaPlaylist);
+    });
+  }, []);
+
+  console.log(playlists);
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        flex: 1,
+      }}
+    >
       <Menu busca={valorDaBusca} setValor={setValorDaBusca} />
       <Banner />
       <Header />
-      <Timeline busca={valorDaBusca} playlists={config.playlists} />
+      <Timeline busca={valorDaBusca} playlists={playlists} />
     </div>
   );
 }
